@@ -1,7 +1,9 @@
 import React from "react";
+
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import { Login, ForgotPassword, Register } from "../screens";
 import { COLORS, ROUTES } from "../constants";
+import MyDrawer from "./MyDrawer";
 
 const Stack = createNativeStackNavigator();
 
@@ -30,7 +32,7 @@ const AuthNavigation = () => {
       <Stack.Screen name={ROUTES.REGISTER} component={Register} />
       <Stack.Screen
         name={ROUTES.HOME}
-        component={Register}
+        component={MyDrawer}
         options={{headerShown: false}}
       />
     </Stack.Navigator>
