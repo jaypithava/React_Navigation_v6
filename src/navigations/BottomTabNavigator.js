@@ -72,14 +72,14 @@ function BottomTabNavigator() {
           tabBarButton: props => (
             <CustomTabBarButton route="settings" {...props} />
           ),
-          headerRight: () => {
+          headerLeft: () => {
             return (
               <TouchableOpacity onPress={() => navigation.openDrawer()}>
                 <Icon
                   name={Platform.OS === 'ios' ? 'ios-menu' : 'md-menu'}
                   size={30}
                   color={COLORS.dark}
-                  style={{marginRight: 10}}
+                  style={{marginLeft: 10}}
                 />
               </TouchableOpacity>
             );
